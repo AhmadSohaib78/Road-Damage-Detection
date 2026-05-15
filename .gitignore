@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Large Model Weights (Keep the best.pt but ignore stock ones if desired)
+# To push weights, you might need Git LFS. For now, we ignore the bulk.
+*.pt
+*.pth
+!project/outputs/yolo_transfer_learning/weights/best.pt
+
+# Node / React
+project/frontend/node_modules/
+project/frontend/build/
+.eslintcache
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Dataset (Too large for GitHub)
+dataset/
+Road Damage Dataset.zip
+runs/

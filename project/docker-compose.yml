@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount model weights so you can update without rebuilding
+      - ./outputs/models:/app/outputs/models:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_PATH=/app/outputs/models/model_v2_yolo.pt
+      - CONFIDENCE_THRESHOLD=0.5
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; r=requests.get('http://localhost:8000/api/v1/health'); exit(0 if r.ok else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
