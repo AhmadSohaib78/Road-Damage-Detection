@@ -23,7 +23,11 @@ project/frontend/build/
 .DS_Store
 Thumbs.db
 
-# Dataset (Too large for GitHub)
+# Dataset & Training (Too large for GitHub)
 dataset/
 Road Damage Dataset.zip
 runs/
+
+# Submission Documents (Keep local, don't push)
+project/FULL_TECHNICAL_REPORT.md
+project/TECHNICAL_ASSESSMENT_SUBMISSION.md
