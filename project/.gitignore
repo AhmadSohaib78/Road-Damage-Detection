@@ -25,7 +25,8 @@ build/
 *.pt
 *.pth
 dataset/
-outputs/
+# Allow the main outputs but ignore bulk training logs if desired
+# outputs/ 
 logs/
 
 # Jupyter
