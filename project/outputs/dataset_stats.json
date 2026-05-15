@@ -1,0 +1,19 @@
+{
+  "original_size": 2009,
+  "augmented_size": 6027,
+  "split": {
+    "train": 4822,
+    "val": 602,
+    "test": 603
+  },
+  "class_distribution": {
+    "pothole": 1858,
+    "crack": 4169
+  },
+  "resolution": "640x640 (YOLO default)",
+  "nc": 2,
+  "names": [
+    "pothole",
+    "crack"
+  ]
+}
